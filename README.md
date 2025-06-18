@@ -1,6 +1,6 @@
 This project applies **conformal prediction** techniques to the California housing dataset to explore and approximate **conditional coverage**, going beyond standard marginal prediction intervals. The goal is to demonstrate how interval calibration behaves across subgroups of the input space, and to test whether we can maintain reliable coverage guarantees under various conditions.
 
-The project was realised in collaboration with Leo Paggen. (Data Science Masters Student)
+The project was realised in collaboration with @Leo Paggen. (Data Science Masters Student)
 There are not may availbale applications of conditional coverage so we decided to come up with this work, applying also the **studentized residuals**, making our more distingusbale. 
 
 ---
