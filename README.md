@@ -16,7 +16,7 @@ This project demonstrates:
 
 ---
 
-## 🧪 Dataset: California Housing
+## Dataset: California Housing
 
 We use the built-in California Housing dataset from `sklearn`, which is a cleaned and numerical-only dataset, similar to the Boston dataset in R. The target variable is the **median house value** (in $100,000s), capped at 5.0 due to original data collection constraints.
 
@@ -25,7 +25,7 @@ We use the built-in California Housing dataset from `sklearn`, which is a cleane
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. **Exchangeability Check**
 Conformal prediction assumes the data is exchangeable (i.e., no time order). We shuffle the data and split it into training and calibration sets, then verify that both sets retain similar distributions.
@@ -43,12 +43,12 @@ Two types of residuals are used:
 
 ---
 
-## 📊 Marginal vs Conditional Coverage
+## Marginal vs Conditional Coverage
 
-### ✅ Marginal Coverage
+### Marginal Coverage
 We first evaluate whether the prediction intervals capture **90% of the true values** on average across the test set.
 
-### 🔍 Conditional Coverage (Approximation)
+### Conditional Coverage (Approximation)
 Since exact conditional coverage is theoretically impossible (shown by Lei and Wasserman, 2014), we **approximate** it by conditioning on **feature bins**:
 
 #### Conditioned on:
@@ -61,7 +61,7 @@ We measure:
 
 ---
 
-## 📈 Results
+## Results
 
 - Marginal coverage is reliably close to 90% using both residual methods.
 - Conditional coverage approximation shows **slight under-coverage** in some bins (especially for medium `AveRooms` and low `Population`).
@@ -69,7 +69,7 @@ We measure:
 
 ---
 
-## 🧠 Key Insights
+## Key Insights
 
 - Standard conformal intervals **do not guarantee** per-group or per-instance validity. This is really cool to show in actual real practice examples, as based on the thoery, those guarantees would have a higer probability. 
 - **Studentized residuals** provide more flexible interval construction by adjusting for local error variance.
