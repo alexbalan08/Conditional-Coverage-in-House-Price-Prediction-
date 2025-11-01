@@ -62,7 +62,7 @@ We measure:
 
 ## Results
 
-- Marginal coverage is reliably close to 90% using both residual methods.
+- Marginal coverage is close to 90% using both residual methods.
 - Conditional coverage approximation shows **slight under-coverage** in some bins (especially for medium `AveRooms` and low `Population`).
 - Studentized intervals better adapt to areas with higher uncertainty and prediction hardness as we would expect. 
 
