@@ -4,13 +4,13 @@ There are not may availbale applications of conditional coverage so we decided t
 
 ---
 
-##  Background
+##  Background on conformal prediction
 
 Conformal prediction offers a distribution-free way to construct **prediction intervals** with a user-defined coverage level (usually 90%). However, these guarantees are  **marginal**, meaning that the 90% coverage is valid on average over the data distribution—not necessarily for every subpopulation or region of the input space. For example subgroups in continous data. 
 
 I will show that in practice achieving full coverag on all subgroups is usually not possible. 
 
-This project demonstrates:
+In this project I demonstrate:
 - The difference between **marginal** and **conditional coverage**
 - How to approximate conditional coverage using **subgroup-based conditioning**
 - The value of **studentized residuals** for adapting to prediction difficulty so basically accouting for **variance in the prediction**. (this is a cool addition, introduced in the original paper)
@@ -35,7 +35,7 @@ Two types of residuals are used:
 - **Studentized residuals**: Scales the error by an estimate of its standard deviation (adaptive to "local" uncertainty) - and this is really cool
 
 ### 3. **Prediction Pipeline**
-- Train a regression model (e.g., LinearRegression), the model performance is not the scope of this project
+- Train a regression model (LinearRegression), the model performance is not the scope of this project
 - Fit a secondary model to predict residual spread (as the mathematical paper introduced so a different model for residuals)
 - Calibrate conformal prediction intervals on the calibration set
 - Construct intervals on test data using both methods
@@ -54,9 +54,7 @@ Since exact conditional coverage is theoretically impossible (shown by Lei and W
 - **AveRooms**: Split into 3 bins (low, medium, high average rooms)
 - **Population**: Split into 5 quantile bins
 
-We measure:
-- The coverage rate within each bin
-- Deviations from the desired 90% coverage
+I measured the coverage rate within each bin and as well the deviations from the desired 90% coverage
 
 ---
 
@@ -68,7 +66,7 @@ We measure:
 
 ---
 
-## Final Insights
+## Final observations I have
 
 - Standard conformal intervals **do not guarantee** per-group validity. This is really cool to show in actual real practice examples, as based on the thoery, those guarantees would have a higer probability, especially for a small numer of subgroups like in my case. Imagine if you would try for each entry x from test set (again this was already shown it's impossible in 2014)
 - **Studentized residuals** provide more flexible interval construction by adjusting for local error variance.
