@@ -15,6 +15,8 @@ In this project I demonstrate:
 - How to approximate conditional coverage using **subgroup-based conditioning**
 - The value of **studentized residuals** for adapting to prediction difficulty so basically accouting for **variance in the prediction**. (this is a cool addition, introduced in the original paper)
 
+- https://arxiv.org/abs/2411.11824
+
 ---
 
 ## Dataset: California Housing
