@@ -60,7 +60,7 @@ I measured the coverage rate within each bin and as well the deviations from the
 
 ---
 
-## Results
+## Results and some findings
 
 - Marginal coverage is close to 90% using both residual methods.
 - Conditional coverage approximation shows **slight under-coverage** in some bins (especially for medium `AveRooms` and low `Population`).
